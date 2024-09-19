@@ -26,8 +26,7 @@ class CreateUser {
         await page.waitForTimeout(1000);
         await page.locator(locator.fieldPassword).click();
         await page.locator(locator.fieldPassword).fill('Opi12345#');
-       // await page.locator('body > app-root > app-login > div > section > app-login-form > div > form > div > button.p-element.p-ripple.w-full.p-button-rounded.p-button-secondary.uppercase.flex.justify-content-center.p-button.p-component').fill(keyword.userPassword);
-       await page.locator(locator.buttonLogin, { hasText: 'Iniciar sesión' }).click();
+        await page.locator(locator.buttonLogin, { hasText: 'Iniciar sesión' }).click();
 
 
         // Navega a la sección de creación de usuario

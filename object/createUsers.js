@@ -10,9 +10,9 @@ class CreateUser {
         };
 
         let locator = {
-            fieldUserEmail: '#forgot-password-email',
+            fieldUserEmail: '#email',
             fieldPassword: '#confirm-password',
-            buttonLogin: 'body > app-root > app-login > div > section > app-login-form > div > form > div > button.p-element.p-ripple.w-full.p-button-rounded.p-button-secondary.uppercase.flex.justify-content-center.p-button.p-component',
+            buttonLogin: 'span.p-button-label.ng-star-inserted',
             buttonRoll: 'div[role="radio"]'
         };
 
@@ -25,8 +25,10 @@ class CreateUser {
         await page.locator(locator.fieldUserEmail).fill(keyword.userEmail)
         await page.waitForTimeout(1000);
         await page.locator(locator.fieldPassword).click();
-        await page.locator('body > app-root > app-login > div > section > app-login-form > div > form > div > button.p-element.p-ripple.w-full.p-button-rounded.p-button-secondary.uppercase.flex.justify-content-center.p-button.p-component').fill(keyword.userPassword);
-        await page.locator(locator.buttonLogin).click();
+        await page.locator(locator.fieldPassword).fill('Opi12345#');
+       // await page.locator('body > app-root > app-login > div > section > app-login-form > div > form > div > button.p-element.p-ripple.w-full.p-button-rounded.p-button-secondary.uppercase.flex.justify-content-center.p-button.p-component').fill(keyword.userPassword);
+       await page.locator(locator.buttonLogin, { hasText: 'Iniciar sesión' }).click();
+
 
         // Navega a la sección de creación de usuario
         await page.getByText(keyword.buttonCreateUser).click();

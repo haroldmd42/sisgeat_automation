@@ -1,4 +1,4 @@
-import { numeroAleatorio8Digitos, listNameUser, listLastnameUser, selectBirthDay, numeroAleatorio4Digitos, selectTypeDirection, selectMunicipalityAmazonas, selectMunicipalityArauca, selectTypeDocuments, selectEscolarity, selectGender, selectChargeEAT } from "./utils/utils";
+import { numeroAleatorio8Digitos, listNameUser, listLastnameUser, selectBirthDay, numeroAleatorio4Digitos, selectTypeDirection, selectMunicipalityAmazonas, selectMunicipalityArauca, selectTypeDocuments, selectEscolarity, selectGender, selectChargeEAT, nombreSolicitudAleaotrio } from "./utils/utils";
 import path from 'path';
 class RequestEAT {
 
@@ -27,7 +27,7 @@ class RequestEAT {
         await page.locator(locator.selectComboBox).nth(1).click()
         // Región de Planeación y Gestión - RPG, Asociación de Municipios, Provincia Administrativa de Planificación - PAP, Área Metropolitana, Región Administrativa de Planificación - RAP
         await page.getByText('Asociación de Municipios').click()
-        await page.locator('#name').fill('Solicutd tiempo 5 dias porcentaje 50 %')
+        await page.locator('#name').fill(nombreSolicitudAleaotrio())
         await page.locator(locator.selectComboBox).nth(2).click()
         await page.getByText(selectTypeDirection(), { exact: true }).click()
         await page.locator('#street').fill('25 sur')
@@ -92,6 +92,10 @@ class RequestEAT {
         await page.locator(locator.inputFile).nth(7).setInputFiles(keyword.keywordRoute);
         await page.locator(locator.inputFile).nth(8).setInputFiles(keyword.keywordRoute);
         await page.locator(locator.inputFile).nth(10).setInputFiles(keyword.keywordRoute);
+        await page.locator(locator.inputFile).nth(11).setInputFiles(keyword.keywordRoute);
+        await page.locator(locator.inputFile).nth(12).setInputFiles(keyword.keywordRoute);
+        await page.locator(locator.inputFile).nth(13).setInputFiles(keyword.keywordRoute);
+        await page.locator(locator.inputFile).nth(14).setInputFiles(keyword.keywordRoute);
         await page.getByText('Siguiente').click()
 
 
@@ -115,7 +119,7 @@ class RequestEAT {
         //Cuarto formulario Envio de solicitud
         await page.locator('#email').fill('ususarioeat' + numeroAleatorio4Digitos() + '@yopmail.com')
         await page.locator('#undefined').fill(keyword.loremIpsumText)
-        await page.locator('button:has(span.p-button-label:has-text("Enviar"))').click();
+        await page.locator('button:has(span.p-button-label:has-text("Siguiente"))').click();
 
     }
 }

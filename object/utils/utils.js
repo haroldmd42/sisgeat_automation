@@ -190,3 +190,43 @@ export function numeroAleatorioEntre0y20() {
     return Math.floor(Math.random() * 21);
 }
 
+export function nombreSolicitudAleaotrio(){
+    const ENTIDADES_TERRITORIALES = [
+        "Amazonas - Región selvática al sur de Colombia, conocida por su biodiversidad",
+        "Antioquia - Departamento montañoso del noroeste, famoso por su cultura paisa",
+        "Arauca - Región del oriente colombiano, rica en ganadería y recursos petroleros",
+        "Atlántico - Departamento ubicado en la costa caribeña, con una gran riqueza cultural",
+        "Bolívar - Hogar de Cartagena, ciudad histórica y patrimonio de la humanidad",
+        "Boyacá - Región central conocida por sus paisajes, cultura colonial y el Puente de Boyacá",
+        "Caldas - Parte del Eje Cafetero, famoso por la producción de café",
+        "Caquetá - Departamento amazónico, rico en biodiversidad y cultura indígena",
+        "Casanare - Región del oriente colombiano, conocida por sus llanuras y fauna silvestre",
+        "Cauca - Región del suroccidente, con gran diversidad cultural e indígena",
+        "Cesar - Conocido por el vallenato y sus fértiles tierras para la agricultura",
+        "Chocó - Departamento en la costa pacífica, conocido por su selva y comunidades afrodescendientes",
+        "Córdoba - Región del Caribe colombiano, famosa por sus festivales y tradiciones ganaderas",
+        "Cundinamarca - Ubicado en el centro del país, rodeando a la capital, Bogotá",
+        "Guainía - Territorio selvático al este de Colombia, con abundantes ríos y cultura indígena",
+        "Guaviare - Región amazónica con paisajes únicos y biodiversidad",
+        "Huila - Departamento del suroccidente conocido por el Parque Arqueológico de San Agustín",
+        "La Guajira - Tierra del desierto, el mar y la cultura Wayúu",
+        "Magdalena - Región caribeña con playas y sitios históricos como Santa Marta",
+        "Meta - Corazón de los llanos orientales, conocido por su ganadería y paisajes",
+        "Nariño - Región del suroccidente, con paisajes andinos y acceso al Pacífico",
+        "Norte de Santander - Departamento fronterizo con Venezuela, rico en cultura e historia",
+        "Putumayo - Región amazónica con paisajes naturales y riqueza cultural indígena",
+        "Quindío - Parte del Eje Cafetero, conocido por sus cafetales y parques temáticos",
+        "Risaralda - Región cafetera, destacada por su arquitectura y turismo ecológico",
+        "San Andrés y Providencia - Archipiélago caribeño con playas paradisíacas",
+        "Santander - Región montañosa famosa por su gastronomía y deportes extremos",
+        "Sucre - Departamento caribeño con tradiciones folclóricas y playas",
+        "Tolima - Ubicado en el centro del país, famoso por el volcán Nevado del Tolima",
+        "Valle del Cauca - Departamento del suroccidente con Cali como capital, cuna de la salsa",
+        "Vaupés - Región selvática con biodiversidad y comunidades indígenas",
+        "Vichada - Departamento en los llanos orientales, conocido por su tranquilidad y paisajes"
+      ];
+      const indexNameRequest = ENTIDADES_TERRITORIALES[Math.floor(Math.random() * ENTIDADES_TERRITORIALES.length)]
+      const randomNameRequest = indexNameRequest
+      return randomNameRequest
+      
+}

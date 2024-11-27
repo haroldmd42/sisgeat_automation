@@ -31,12 +31,12 @@ class CreateUser {
 
         // Navega a la sección de creación de usuario
         await page.getByText(keyword.buttonCreateUser).click();
-        const roleName = rollUserRandom();
         function numeroAleatorio2() {
-            return Math.floor(Math.random() * 8);
+            const numerosValidos = [0, 3, 4, 6, 7];
+            const indiceAleatorio = Math.floor(Math.random() * numerosValidos.length);
+            return numerosValidos[indiceAleatorio];
         }
-        await page.locator(locator.buttonRoll).nth(numeroAleatorio2()).click();
-        //await page.click('span.p-button-label:has-text("${saveRollser}")');
+        await page.locator(locator.buttonRoll).nth(numeroAleatorio2()).click()
         await page.getByText(keyword.buttonNext).click();
         // Completa el formulario de creación de usuario
         await page.locator('#create-name').fill(userNames);

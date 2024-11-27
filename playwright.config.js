@@ -20,7 +20,7 @@ module.exports = defineConfig({
   
   use: {
     trace: 'on-first-retry',
-    slowMo: 200000,
+    slowMo: 500000,
     headless: false,
   },
   

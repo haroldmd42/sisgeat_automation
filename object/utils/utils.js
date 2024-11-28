@@ -127,9 +127,6 @@ export function selectMunicipalityAmazonas(){
         'La pedrera',
         'La victoria',
         'Leticia',
-        'Mirití - paraná',
-        'Puerto alegría',
-        'Puerto arica',
         'Puerto nariño',
         'Puerto santander',
         'Tarapacá']

@@ -89,14 +89,14 @@ class RequestEAT {
         await page.locator(locator.inputFile).nth(2).setInputFiles(keyword.keywordRoute);
         await page.locator(locator.inputFile).nth(5).setInputFiles(keyword.keywordRoute);
         await page.locator(locator.inputFile).nth(6).setInputFiles(keyword.keywordRoute);
-        await page.locator(locator.inputFile).nth(7).setInputFiles(keyword.keywordRoute);
         await page.locator(locator.inputFile).nth(8).setInputFiles(keyword.keywordRoute);
         await page.locator(locator.inputFile).nth(10).setInputFiles(keyword.keywordRoute);
-        await page.locator(locator.inputFile).nth(11).setInputFiles(keyword.keywordRoute);
         await page.locator(locator.inputFile).nth(12).setInputFiles(keyword.keywordRoute);
-        await page.locator(locator.inputFile).nth(13).setInputFiles(keyword.keywordRoute);
         await page.locator(locator.inputFile).nth(14).setInputFiles(keyword.keywordRoute);
+        await page.locator(locator.inputFile).nth(16).setInputFiles(keyword.keywordRoute);
+        await page.locator(locator.inputFile).nth(18).setInputFiles(keyword.keywordRoute);
         await page.getByText('Siguiente').click()
+       
 
 
         //Tercer formulario Documentos de conformación
@@ -107,6 +107,7 @@ class RequestEAT {
         await page.locator(locator.inputFile).nth(7).setInputFiles(keyword.keywordRoute);
         //await page.locator(locator.inputFile).nth(8).setInputFiles(keyword.keywordRoute);
         await page.locator(locator.autocompleteInput).fill('Fabricación de muebles')
+        await page.waitForTimeout(100)
         await page.getByText('Fabricación de muebles').click()
         //await page.locator('#eat-concept-number').fill(numeroAleatorio8Digitos())
         //await page.locator('#eat-concept-date').fill(selectBirthDay())
@@ -119,7 +120,7 @@ class RequestEAT {
         //Cuarto formulario Envio de solicitud
         await page.locator('#email').fill('ususarioeat' + numeroAleatorio4Digitos() + '@yopmail.com')
         await page.locator('#undefined').fill(keyword.loremIpsumText)
-        await page.locator('button:has(span.p-button-label:has-text("Siguiente"))').click();
+        await page.locator('button:has(span.p-button-label:has-text("Enviar"))').click();
 
     }
 }

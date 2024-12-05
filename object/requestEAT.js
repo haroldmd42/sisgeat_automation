@@ -54,7 +54,7 @@ class RequestEAT {
         await page.locator('#webpage').fill('https://sisgeatqa.opitech.com.co/sisgeat/register-eat')
         await page.locator('#eat-object').fill('Objeto del EAT')
         await page.locator('#time').fill('22')
-        await page.locator(locator.autocompleteInput).fill('Pruebas de integración');
+        await page.locator(locator.autocompleteInput).fill('Pruebas de integración de SISGEAT');
         await page.getByText('Siguiente').click()
 
         //Segundo formulario, Representante Legal

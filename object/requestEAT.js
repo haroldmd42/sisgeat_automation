@@ -115,6 +115,7 @@ class RequestEAT {
         await page.locator('#eat-agreement-date').fill(selectBirthDay())
         await page.locator('#eat-statutes-number').fill(numeroAleatorio8Digitos())
         await page.locator('#eat-statutes-date').fill(selectBirthDay())
+        await page.waitForTimeout(1000)
         await page.getByText('Siguiente').click()
 
         //Cuarto formulario Envio de solicitud

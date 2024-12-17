@@ -63,6 +63,7 @@ class LogInProfesional {
 export const logInProfesional = new LogInProfesional();
 
 
+
 class AprobarRachazar{
     async cargarORechazar(page) {
         try {

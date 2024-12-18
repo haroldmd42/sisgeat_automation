@@ -15,7 +15,7 @@ class AproveEAT {
 
         // Ejecuta primero el inicio de sesión del coordinador
         console.log('Iniciando sesión como Coordinador...');
-        //await logInCoordinador.formLogIn(page);
+        await logInCoordinador.formLogIn(page);
 
         // Si necesitas iniciar sesión también como profesional
         console.log('Iniciando sesión como Profesional...');
@@ -44,8 +44,6 @@ class AproveEAT {
         await page.getByText('Resultado de la revisión EAT').click();
         await page.getByText('Aprobar solicitud').click();
         await page.getByText('Aprobar y enviar').click();
-
-        await page.waitForTimeout(8000);
         await page.getByText('Cerrar sesión').click();
     }
 }

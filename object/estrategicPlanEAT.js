@@ -128,6 +128,7 @@ class EstrategicPlanEAT {
         await page.getByText('Terminar').click()
         await page.waitForTimeout(2000)
         await page.getByText('Radicar información').click()
+        await page.waitForTimeout(2000)
 
         
     }

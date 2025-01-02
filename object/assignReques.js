@@ -3,6 +3,9 @@ class LogInCoordinador {
         let keyword = {
             userEmail: 'pepe@yopmail.com',
             userPassword: 'Prueba123*',
+            
+            //userEmail: 'carlos.garzong+8@opitech.com.co',
+            //userPassword: 'Anacar0312$',
         };
 
         let locator = {
@@ -11,6 +14,9 @@ class LogInCoordinador {
             buttonLogin: 'span.p-button-label.ng-star-inserted',
             buttonRoll: 'div[role="radio"]'
         };
+
+        //URL DEV
+        //await page.goto('https://sisgeatdev.opitech.com.co/sisgeat/auth/login');
 
         // Navega a la página de inicio de sesión
         await page.goto('https://sisgeatqa.opitech.com.co/sisgeat/auth/login');
@@ -24,7 +30,7 @@ class LogInCoordinador {
         await page.getByText('Radicada', { exact: true }).first().click();
         await page.getByText('Asignar Profesional EAT').click()
         await page.locator('#professionals').click();
-        await page.getByText("Yan Harold Muñoz Dominguez").click()
+        await page.getByText("Yan Harold").click()
         await page.getByText('Asignar Profesional EAT').nth(2).click()
         await page.getByText('confirmar').click()
         await page.waitForTimeout(500)

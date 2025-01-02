@@ -49,6 +49,8 @@ class EstrategicPlanEAT {
 
             // Iniciar sesión en SISGEAT
             console.log('Iniciando sesión en SISGEAT...');
+            //URL DEV
+            //await page.goto('https://sisgeatdev.opitech.com.co/sisgeat/auth/login');
             await page.goto('https://sisgeatqa.opitech.com.co/sisgeat/');
             await page.fill('#email', email);
             await page.fill('#confirm-password', password);
@@ -63,11 +65,16 @@ class EstrategicPlanEAT {
         await page.getByText('Establecer contraseña').click()
         await page.getByText('Acuerdos y ordenanzas').click()
         await page.locator('input[type="file"]').nth(0).setInputFiles(keyword.keywordRoute);
+        await page.waitForTimeout(1000)
         await page.locator('input[type="file"]').nth(1).setInputFiles(keyword.keywordRoute);
+        await page.locator('#eat-agreement-title').fill('Pruebas automatizadas')
+        //await page.locator('input[type="file"]').nth(2).setInputFiles(keyword.keywordRoute);
         
         await page.locator('#eat-agreement-number').fill('1231231232')
         await page.locator('#eat-agreement-date').fill(selectBirthDay())
+        await page.waitForTimeout(600)
         await page.getByText('Cargar', { exact: true }).click()
+        await page.waitForTimeout(5000)
         await page.getByText('Detalle del DNP').click()
         await page.locator("span.p-element,p-dropdown-label.p-inputtext.p-dropdown-label-empty.ng-star-inserted").first().click()
         await page.getByText('Modificado por observaciones DNP').click()

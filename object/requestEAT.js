@@ -17,6 +17,10 @@ class RequestEAT {
 
 
         let selectAraucaMunicipality = selectMunicipalityArauca()
+        //URL DEV
+        //await page.goto('https://sisgeatdev.opitech.com.co/sisgeat/auth/login');
+
+        //URL DEV
         await page.goto('https://sisgeatqa.opitech.com.co/sisgeat/auth/login');
 
         //Primer formulario Información Básica del EAT

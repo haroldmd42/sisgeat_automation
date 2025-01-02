@@ -2,8 +2,8 @@
 class LogIn {
     async formLogIn(page) {
         let keyword = {
-            userEmail: 'yan.munozd@opitech.com.co',
-            userPassword: 'Opi12345#',
+            userEmail: 'juan.barrerao+03@opitech.com.co',
+            userPassword1: 'Opitech2024$',
             buttonCreateUser: 'Crear usuario',
             buttonNext: 'Siguiente'
         };
@@ -15,9 +15,11 @@ class LogIn {
             buttonRoll: 'div[role="radio"]'
         };
 
-       
+        //URL DEV
+        await page.goto('https://sisgeatdev.opitech.com.co/sisgeat/auth/login');
+
         // Navega a la página de inicio de sesión
-        await page.goto('https://sisgeatqa.opitech.com.co/sisgeat/auth/login');
+        //await page.goto('https://sisgeatqa.opitech.com.co/sisgeat/auth/login');
 
         // Completa el formulario de inicio de sesión
         await page.locator(locator.fieldUserEmail).fill(keyword.userEmail)
@@ -36,6 +38,10 @@ class LogInProfesional {
         let keyword = {
             userEmail: 'yan.munozd+7776@opitech.com.co',
             userPassword: 'Opi12345#',
+            
+            //Credecniales dev profesional
+            //userEmail: 'juan.barrerao+03@opitech.com.co',
+            //userPassword: 'Opitech2024$',
             buttonCreateUser: 'Crear usuario',
             buttonNext: 'Siguiente'
         };
@@ -47,7 +53,9 @@ class LogInProfesional {
             buttonRoll: 'div[role="radio"]'
         };
 
-       
+        //URL DEV
+        //await page.goto('https://sisgeatdev.opitech.com.co/sisgeat/auth/login');
+
         // Navega a la página de inicio de sesión
         await page.goto('https://sisgeatqa.opitech.com.co/sisgeat/auth/login');
 
@@ -55,7 +63,7 @@ class LogInProfesional {
         await page.locator(locator.fieldUserEmail).fill(keyword.userEmail)
         await page.waitForTimeout(1000);
         await page.locator(locator.fieldPassword).click();
-        await page.locator(locator.fieldPassword).fill('Opi12345#');
+        await page.locator(locator.fieldPassword).fill(keyword.userPassword);
         await page.locator(locator.buttonLogin, { hasText: 'Iniciar sesión' }).click();
     }
 }

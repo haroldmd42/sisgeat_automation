@@ -2,8 +2,8 @@
 class LogIn {
     async formLogIn(page) {
         let keyword = {
-            userEmail: 'juan.barrerao+03@opitech.com.co',
-            userPassword1: 'Opitech2024$',
+            userEmail: 'yan.munozd@opitech.com.co',
+            userPassword1: 'Opi12345#',
             buttonCreateUser: 'Crear usuario',
             buttonNext: 'Siguiente'
         };
@@ -16,10 +16,10 @@ class LogIn {
         };
 
         //URL DEV
-        await page.goto('https://sisgeatdev.opitech.com.co/sisgeat/auth/login');
+        //await page.goto('https://sisgeatdev.opitech.com.co/sisgeat/auth/login');
 
         // Navega a la página de inicio de sesión
-        //await page.goto('https://sisgeatqa.opitech.com.co/sisgeat/auth/login');
+        await page.goto('https://sisgeatqa.opitech.com.co/sisgeat/auth/login');
 
         // Completa el formulario de inicio de sesión
         await page.locator(locator.fieldUserEmail).fill(keyword.userEmail)

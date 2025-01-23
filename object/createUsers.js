@@ -32,7 +32,7 @@ class CreateUser {
         // Navega a la sección de creación de usuario
         await page.getByText(keyword.buttonCreateUser).click();
         function numeroAleatorio2() {
-            const numerosValidos = [0, 3, 4, 6, 7];
+            const numerosValidos = [0, 4, 6, 7];
             const indiceAleatorio = Math.floor(Math.random() * numerosValidos.length);
             return numerosValidos[indiceAleatorio];
         }
